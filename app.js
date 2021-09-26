@@ -1,9 +1,14 @@
 const submitButton = document.querySelector("#submit-btn");
 const input = document.querySelector("#date");
 const output = document.querySelector("#output");
-submitButton.addEventListener("click", buttomHandler);
+submitButton.addEventListener("click", addTimeout);
 
-function buttomHandler() {
+function addTimeout() {
+  setTimeout(buttonHandler, 2000);
+  output.innerText = "Loading....";
+}
+
+function buttonHandler() {
   var bdayDate = input.value;
 
   if (isEmpty(bdayDate)) {
